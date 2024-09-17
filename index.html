@@ -1,18 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <script src="app.js" defer></script>
-    <h1>Color Changing</h1>
-    <div></div>
-    <button type="button">click me</button>
-   
+<!-- html tag is parent of head and body tag -->
+<!-- html is not case sensitive -->
 
+<!DOCTYPE html>
+<!-- this tells browser that we are using HTML5 -->
+<html lang="en">
+  <!-- tells the language in which the code is written is english "lang = attribute"  -->
+  <!-- all the content resides in html tag this is opening of html tag "root of a html document" also called root element -->
+  <head>
+    <!-- head tag is container for meta data , the viewport statement in this tag tell about the responsiveness of a device -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- page title is written here-->
+  </head>
+  <body>
+    <!-- contains all the data that will be rendered on website page/browser -->
+    <!-- HTML headings -->
+    <h1>Hello</h1>
+    <!-- Most important it shows the google search that this is most important, it effects the SEO we shouldn't use heading for font sizes for that we have font size property in css -->
+    <h2>Hello</h2>
+    <h3>hello</h3>
+    <h4>Hello</h4>
+    <h5>Hello</h5>
+    <h6>Hello</h6>
+    <!-- least important-->
+    <p>This is paragraph tag</p>
+
+    <!-- Anchor tag add links to website -->
+     <a href="https://www.google.com/">Google</a> <!-- absolute link-->
+     <br>
+     <a href="https://www.youtube.com/">Youtube</a> <!-- This is absolute link, Relative link is when we connect our html file with another html file-->
+
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Hubble-Space-Telescope-Galaxy-Collection.jpg/1009px-Hubble-Space-Telescope-Galaxy-Collection.jpg" alt="Galaxies"><!-- absolute link-->
+     <img src="photo.jpg" alt="galaxy" height="100"><!-- relative link-->
+     <b>Bold</b>
+     <i>Italic</i>
+     <u>Underline</u>
+     <big>Big text</big>
+     <hr> <!-- Horizontal ruler-->
+     <small>samll text</small>
+    <p> h<sub>2</sub>O</p>
+     <br>
+     x <sup>2</sup>
+     <pre> <!-- display text as it is unlike p tag that ignore extra spaces-->
+        Lorem                 ipsum dolor sit amet consectetur adipisicing elit. Atque eius corporis consectetur nam, impedit ipsa provident odio molestias sapiente quas minus ab hic iusto, quam ratione unde obcaecati illo earum!
+     </pre>
     
+<!-- there are two types of tags in html. 1.semantic tags(name of tag show its purpose e.g: header, footer etc), it helps in SEO. 2.non-semantic tags(the name of tag doesn't show its purpose e.g: span, div etc).-->
+<!-- we should use header, main and footer to increase readeability of our website -->
+ <header>
+    <h1>main heading</h1>
+ </header>
+
+ <main> <!-- we have tree basic tags-->
+    <section> <!-- To put different section in main body of website--> Education</section>
+    <section> projects </section>
+    <article><!--  to write stories blgs in that tag --> My story: ........</article>
+    <aside><!-- SEO won't detect content in this tag like ads on website etc --> This is an ad</aside>
+    <a href="https://www.google.com" target="_main">Google</a> <!-- target makes it open in next tab-->
+    <a href="https://www.google.com" target="_main"><img src="https://imageio.forbes.com/specials-images/imageserve/647f8116232e9b434557b386/0x0.jpg?format=jpg&crop=5272,2964,x0,y272,safe&height=600&width=1200&fit=bounds" alt="google" height="100"></a> <!-- clickable image, if we set height width will be auto adjusted to maintain aspect ratio and vice versa. setting both parameter at  the same tme is not advisable-->
+<div><!-- if they don't have any element in them they have 0 width, they are called block elements because they take full with when they have elements in them, there are also elements called inline elements they only take space which is required by element only-->
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur optio ipsam, molestiae quis veritatis in repellendus tempore officiis dolores, ex, aut earum eum. Quaerat perferendis distinctio temporibus quos voluptatum blanditiis.</p>
+</div>
+
+ </main>
+
+ <footer> 
+ <h5>
+   contact me at abc@.com
+ </h5></footer>
+ <span>this is inline tag and only take required space</span>
+<time datetime="5: 00">5:00</time>
+<div>
+<ul type="square"><!-- it has square,disc, circle and triangle -->
+  <li>Apple</li>
+  <ol type="A">
+    <li>red Apple </li>
+    <li>Green Apple</li>
+  </ol>
+  <li>Mango</li>
+</ul>
+</div>
+
+<h2>Tables</h2>
+
+<table>
+  <thead>
+  <caption>Student Data</caption>
+
+<tr>
+  <th colspan="2">Information</th>
+  
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Eric</td>
+  <td>6:00</td>
+</tr>
+
+  <tr>
+  <td>Sam</td>
+  <td>7:00</td>
+</tr>
+</tbody>
+</table>
+
+<form action="abc server">
+  <LABEL for="NAME"> ENTER YOUR NAME
+    <input type="text" placeholder="Enter your name">
+  </LABEL>
+  <INPUT type="password"></INPUT>
+  <input type="color" >
+  <label for="101"> <!-- LAbel in radio button make tick the option by even clicking on text-->
+    <INput type="radio" value="option1" name="option" id="101">option1 </INput>
+  <INput type="radio" value="option2" name="option" id="101">option2 </INput>
+ <input type="file">
+</label>
+
+
+   <!--range input-->
+   <label for="points">Points (between 0 and 10):</label>
+   <input type="range" id="points" name="points" min="0" max="10">
+   <button type="submit">submit</button>
+   <button type="reset">reset</button>
+   <button type="menu">menu</button>
+   <button type="button">button</button>
+
+</form>
+ <!-- iframe tag show website inside a website-->
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/ymuv5aUzWu0?si=uhJxbyK4qOPrMdJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <br>
+<video src="./myvideo.mp4" width="560" height="315" controls autoplay></video>
+
+
 </body>
 </html>
